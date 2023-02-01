@@ -1,0 +1,35 @@
+.gallery {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  img {
+    width: 25%;
+    cursor: pointer;
+
+    /* meee */
+    border: 1px solid black;  
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  input, button {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 20px;
+  }
+  
+  #user-info, #dice, #coupon, #congrats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #result {
+    font-size: 20px;
+  }
+  

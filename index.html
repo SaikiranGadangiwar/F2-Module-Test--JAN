@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <div class="gallery">
+        <img id="img1" src="image1.png">
+        <img id="img2" src="image2.png">
+        <img id="img3" src="image3.png">
+        <img id="img4" src="image4.png">
+      </div>
+      
+      <div id="form" style="display: none;">
+        <form>
+          <input type="text" id="name" placeholder="Name">
+          <input type="email" id="email" placeholder="Email">
+          <input type="text" id="username" placeholder="Username">
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+      
+      <div id="user-info" style="display: none;">
+        <p>Name: <span id="display-name"></span></p>
+        <p>Username: <span id="display-username"></span></p>
+      </div>
+      
+      <div id="dice" style="display: none;">
+        <img src="dice.png">
+        <p id="result"></p>
+      </div>
+      
+      <div id="coupon" style="display: none;">
+        <p>Coupon: <span id="display-coupon"></span></p>
+      </div>
+      
+      <div id="congrats" style="display: none;">
+       
+        <img class="congrats-img" src="congrats.png" alt="Congratulations">
+      </div>
+
+      
+      <script src="script.js"></script>
+    
+</body>
+</html>
