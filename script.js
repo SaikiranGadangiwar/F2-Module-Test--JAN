@@ -13,33 +13,37 @@ const displayCoupon = document.getElementById("display-coupon");
 const result = document.getElementById("result");
 
 
-// let sum = 0;
 
-img1.addEventListener("click", function() {
-    //this.style.pointerEvents = 'none';
-  form.style.display = "flex";
+img2.style.pointerEvents = "none";
+img3.style.pointerEvents = "none";
+img4.style.pointerEvents = "none";
+
+img1.addEventListener("click", function () {
+    img2.style.pointerEvents = "auto";
+    form.style.display = "flex";
 });
 
-// form.add
+
 
 
 let name, username;
-  
-form.addEventListener('submit', function(event) {
-  event.preventDefault();
-  
-  name = document.querySelector('#name').value;
-  username = document.querySelector('#username').value;
-  
-  document.querySelector('#display-name').textContent = name;
-  document.querySelector('#display-username').textContent = username;
+
+form.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    name = document.querySelector('#name').value;
+    username = document.querySelector('#username').value;
+
+    document.querySelector('#display-name').textContent = name;
+    document.querySelector('#display-username').textContent = username;
 });
 
 
 
-img2.addEventListener('click', function() {
-    //this.style.pointerEvents = 'none';
-  userInfo.style.display = 'flex';
+img2.addEventListener('click', function () {
+    form.style.display = "none";
+    img3.style.pointerEvents = "auto";
+    userInfo.style.display = "flex";
 });
 
 
@@ -47,49 +51,57 @@ img2.addEventListener('click', function() {
 
 let attempts = 0;
 let sum = 0;
-  let count = 0;
-  
-  img3.addEventListener('click', function() {
-    dice.style.display = 'block';
-  });
-  
-  dice.addEventListener('click', function() {
+let count = 0;
+
+img3.addEventListener('click', function () {
+
+    userInfo.style.display = "none";
+    
+    dice.style.display = "flex";
+
+});
+
+dice.addEventListener('click', function () {
     let value = Math.floor(Math.random() * 6) + 1;
     result.textContent += value + ' ';
     sum += value;
     count++;
-    
+
     if (count === 3) {
         attempts++;
-      if (sum > 10) {
-        document.querySelector('#img4').style.pointerEvents = 'auto';
-      } else if(attempts===2){
-        result.textContent += 'Bad luck. ';
-        attempts=0;
-      }else {
+        if (sum > 10) {
+            result.textContent += ' Click On 4th Image. ';
+            img4.style.pointerEvents = "auto";
+            //document.querySelector('#img4').style.pointerEvents = 'auto';
+        } else if (attempts === 2) {
+            result.textContent += 'Bad luck. ';
+            attempts = 0;
+        } else {
 
-        result.textContent += 'Try again. ';
-        count = 0;
-        sum = 0;
-      }
+            result.textContent += 'Try again. ';
+            count = 0;
+            sum = 0;
+        }
 
 
-      
+
     }
-  });
+});
 
 
 
 
-img4.addEventListener('click', function() {
-    this.style.pointerEvents = 'none';
+img4.addEventListener('click', function () {
+
+    dice.style.display = "none";
+
     let text = '';
     for (let i = 0; i < 12; i++) {
-      text += Math.floor(Math.random() * 10);
+        text += Math.floor(Math.random() * 10);
     }
     displayCoupon.textContent = text;
-    coupon.style.display = 'block';
+    coupon.style.display = "flex";
 
     congrats.style.display = 'block';
 
-  });
+});
