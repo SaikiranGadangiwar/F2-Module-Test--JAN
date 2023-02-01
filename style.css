@@ -37,3 +37,17 @@ button {
 #result {
     font-size: 20px;
 }
+
+#btn{
+    border-radius: 15px;
+    background-color: green;
+    color: aliceblue;
+    
+}
+#user-info{
+    font-size:50px;
+    font-weight: 500;
+    
+
+   
+}

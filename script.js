@@ -19,8 +19,10 @@ img3.style.pointerEvents = "none";
 img4.style.pointerEvents = "none";
 
 img1.addEventListener("click", function () {
-    img2.style.pointerEvents = "auto";
+   
+    
     form.style.display = "flex";
+    img1.style.pointerEvents = "none"
 });
 
 
@@ -29,6 +31,7 @@ img1.addEventListener("click", function () {
 let name, username;
 
 form.addEventListener('submit', function (event) {
+    img2.style.pointerEvents = "auto";
     event.preventDefault();
 
     name = document.querySelector('#name').value;
@@ -41,9 +44,11 @@ form.addEventListener('submit', function (event) {
 
 
 img2.addEventListener('click', function () {
+    
     form.style.display = "none";
     img3.style.pointerEvents = "auto";
     userInfo.style.display = "flex";
+    img2.style.pointerEvents = "none";
 });
 
 
@@ -58,6 +63,7 @@ img3.addEventListener('click', function () {
     userInfo.style.display = "none";
     
     dice.style.display = "flex";
+    img3.style.pointerEvents = "none";
 
 });
 
@@ -72,10 +78,12 @@ dice.addEventListener('click', function () {
         if (sum > 10) {
             result.textContent += ' Click On 4th Image. ';
             img4.style.pointerEvents = "auto";
-            //document.querySelector('#img4').style.pointerEvents = 'auto';
+            dice.style.pointerEvents = "none";
+            
         } else if (attempts === 2) {
             result.textContent += 'Bad luck. ';
             attempts = 0;
+            dice.style.pointerEvents = "none";
         } else {
 
             result.textContent += 'Try again. ';
@@ -103,5 +111,6 @@ img4.addEventListener('click', function () {
     coupon.style.display = "flex";
 
     congrats.style.display = 'block';
+    img4.style.pointerEvents = "none"
 
 });

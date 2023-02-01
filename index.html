@@ -13,22 +13,22 @@
 <body>
 
     <!-- home -->
-    
+
     <div class="gallery">
-        <img id="img1" src="image1.png">
-        <img id="img2" src="image2.png">
-        <img id="img3" src="image3.png">
-        <img id="img4" src="image4.png">
+        <img id="img1" src="image1.png" alt="img1">
+        <img id="img2" src="image2.png" alt="img2">
+        <img id="img3" src="image3.png" alt="img3">
+        <img id="img4" src="image4.png" alt="img4">
     </div>
 
     <!-- on clicking 1st image -->
 
     <div id="form" style="display: none;">
         <form>
-            <input type="text" id="name" placeholder="Name">
-            <input type="email" id="email" placeholder="Email">
-            <input type="text" id="username" placeholder="Username">
-            <button type="submit">Submit</button>
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="text" id="username" placeholder="Username" required>
+            <button id="btn" type="submit" required>Submit</button>
         </form>
     </div>
 
@@ -50,7 +50,7 @@
     <!-- on clicking 4th image -->
 
     <div id="coupon" style="display: none;">
-        <p>Coupon: <span id="display-coupon"></span></p>
+        <p><b>Coupon:</b> <span id="display-coupon"></span></p>
     </div>
 
     <div id="congrats" style="display: none;">
